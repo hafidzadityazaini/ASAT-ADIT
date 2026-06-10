@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import '../models/carmodel.dart';
 
-class CarMarketplaceScreen extends StatefulWidget {
-  const CarMarketplaceScreen({super.key});
+class CarMarketplace extends StatefulWidget {
+  const CarMarketplace({super.key});
 
   @override
-  State<CarMarketplaceScreen> createState() => _CarMarketplaceScreenState();
+  State<CarMarketplace> createState() => _CarMarketplaceScreenState();
 }
 
-class _CarMarketplaceScreenState extends State<CarMarketplaceScreen> {
+class _CarMarketplaceScreenState extends State<CarMarketplace> {
   final String apiUrl = "https://myfakeapi.com/api/cars/";
   List<Car> carList = [];
   bool isLoading = true;
@@ -63,8 +63,8 @@ class _CarMarketplaceScreenState extends State<CarMarketplaceScreen> {
               text: const TextSpan(
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 children: [
-                  TextSpan(text: 'DRIVE', style: TextStyle(color: Colors.white)),
-                  TextSpan(text: '-VERSE', style: TextStyle(color: Color(0xFF3B82F6))),
+                  TextSpan(text: 'MOBIL', style: TextStyle(color: Colors.white)),
+                  TextSpan(text: '-BEKAS', style: TextStyle(color: Color(0xFF3B82F6))),
                 ],
               ),
             ),
@@ -83,12 +83,12 @@ class _CarMarketplaceScreenState extends State<CarMarketplaceScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
-                          "Temukan Mobil Impian",
+                          "Temukan Mobil Impian Dengan Harga Terjangkau",
                           style: TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          "Menampilkan ${carList.length} unit tersedia secara live",
+                          "Menampilkan ${carList.length} unit mobil bekas tersedia secara live",
                           style: const TextStyle(color: Colors.grey, fontSize: 14),
                         ),
                       ],
